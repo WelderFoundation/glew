@@ -30,6 +30,13 @@
 ** THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+//+WELDER
+// Travis CI builds fail on compiling this file under Emscripten.
+#ifdef EMSCRIPTEN
+#  pragma clang optimize off
+#endif
+//-WELDER
+
 #ifndef GLEW_INCLUDE
 #  include <GL/glew.h>
 #else
